@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Pet</title>
+    <script>
+        async function sendAction(action) {
+            const response = await fetch('/interact', {
+                method: 'POST',
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify({action: action})
+            });
+            const data = await response.json();
+            document.getElementById('state').innerText = JSON.stringify(data);
+        }
+    </script>
+</head>
+<body>
+    <h1>Virtual Pet</h1>
+    <button onclick="sendAction('feed')">Feed Pet</button>
+    <button onclick="sendAction('play')">Play with Pet</button>
+    <button onclick="sendAction('rest')">Rest Pet</button>
+    <h2>Pet State:</h2>
+    <pre id="state">{"happiness": 50, "health": 50, "hunger": 50}</pre>
+</body>
+</html>
