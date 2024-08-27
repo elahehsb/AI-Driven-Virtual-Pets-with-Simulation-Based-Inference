@@ -1,6 +1,7 @@
 # AI-Driven-Virtual-Pets-with-Simulation-Based-Inference
 
 ### Project Overview
+
 Imagine a virtual pet that not only interacts with users but also learns and adapts its behavior over time, just like a real pet. This project involves creating a virtual pet application that uses advanced simulation-based inference (SBI) methods to adapt its behavior based on user interactions and environmental changes. The pet's behavior will be governed by a simulator-based model, which will evolve using data from interactions with users. This project combines AI, simulation-based inference, and user interaction to create an engaging and intelligent virtual pet experience.
 
 ### Objectives
